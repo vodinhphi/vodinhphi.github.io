@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-6 m-auto">
+  <form class="mt-5" [formGroup]="Calculator" >
+    <div class="row">
+    <div class="py-4 m-auto font-weight-bold">Simple Calculator</div></div>
+    <div class="row form-group">
+      <label class="col-md-4 text-center"for="x">X:</label>
+      <input type="text" class="col-md-8 form-control"  name="numX" formControlName="numX">
+    </div>
+    <div class="row form-group">
+      <label class="col-md-4 text-center" for="y">Y:</label>
+      <input type="" class=" col-md-8 form-control" id="y"  name="numY" formControlName="numY">
+    </div>
+    <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8 text-center">
+    <button (click)="add()" type="button" class="btn btn-primary mx-3">+</button>
+    <button onclick="subtract()" type="button" class="btn btn-primary  mx-3">-</button>
+    <button onclick="multiply()" type="button" class="btn btn-primary mx-3">*</button>
+    <button onclick="divide()" type="button" class="btn btn-primary  mx-3">/</button>
+    </div>
+  </div><br>
+    <div class="row form-group">
+      <label class="col-md-4 text-center" for="result" >Result:</label>
+      <input type="text" class="col-md-8 form-control"id="resut" name="result" formControlName="result" value="{{Calculator.value.result}}" disabled >
+    </div>
+  </form>
+
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
