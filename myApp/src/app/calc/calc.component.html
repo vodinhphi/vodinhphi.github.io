@@ -19,27 +19,27 @@
     <div class="py-4 m-auto font-weight-bold">Simple Calculator</div></div>
     <div class="row form-group">
       <label class="col-md-4 text-center"for="x">X:</label>
-      <input type="text" class="col-md-8 form-control"  name="numX" formControlName="numX">
+      <input type="text" class="col-md-8 form-control"  name="numX" formControlName="numberOne">
     </div>
     <div class="row form-group">
       <label class="col-md-4 text-center" for="y">Y:</label>
-      <input type="" class=" col-md-8 form-control" id="y"  name="numY" formControlName="numY">
+      <input type="" class=" col-md-8 form-control" id="y"  name="numY" formControlName="numberTwo">
     </div>
     <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-8 text-center">
-    <button (click)="add()" type="button" class="btn btn-primary mx-3">+</button>
-    <button onclick="subtract()" type="button" class="btn btn-primary  mx-3">-</button>
-    <button onclick="multiply()" type="button" class="btn btn-primary mx-3">*</button>
-    <button onclick="divide()" type="button" class="btn btn-primary  mx-3">/</button>
+    <button (click)="Calc(1)" type="button" class="btn btn-primary mx-3">+</button>
+    <button (click)="Calc(2)" type="button" class="btn btn-primary  mx-3">-</button>
+    <button (click)="Calc(3)" type="button" class="btn btn-primary mx-3">*</button>
+    <button (click)="Calc(4)" type="button" class="btn btn-primary  mx-3">/</button>
     </div>
   </div><br>
     <div class="row form-group">
       <label class="col-md-4 text-center" for="result" >Result:</label>
-      <input type="text" class="col-md-8 form-control"id="resut" name="result" formControlName="result" value="{{Calculator.value.result}}" disabled >
+
     </div>
   </form>
-
+  <input type="text" class="col-md-8 form-control"id="resut" name="result" [(ngModel)]="result"  disabled >
   </div>
   </div>
 </div>
